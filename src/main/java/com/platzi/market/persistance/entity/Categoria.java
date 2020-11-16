@@ -1,9 +1,17 @@
 package com.platzi.market.persistance.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "categoria")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Categoria {
 
     @Id
@@ -12,6 +20,8 @@ public class Categoria {
     private Integer idCategoria;
 
     private String descripcion;
-
     private Boolean estado;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 }
