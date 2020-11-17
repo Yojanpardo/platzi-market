@@ -24,6 +24,9 @@ public interface ProductMapper {
     List<Product> toProducts(List<Producto> productos);
 
     @InheritInverseConfiguration
-    @Mapping(target = "codigo_barras", ignore = true)
+    @Mappings({
+            @Mapping(target = "codigoBarras", ignore = true),
+            @Mapping(target = "comprasProductos", ignore = true)
+    })
     Producto toProducto(Product product);
 }

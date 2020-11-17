@@ -18,20 +18,11 @@ public class Cliente {
     @Id
     @Column(name = "id")
     private String cedula;
-
-    @Nullable
     private String nombre;
-
-    @Nullable
     private String apellidos;
-
-    @Nullable
-    private Integer celularl;
-
-    @Nullable
+    private Integer celular;
     private String direccion;
 
-    @Nullable
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
