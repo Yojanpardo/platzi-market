@@ -9,4 +9,5 @@ public interface PurchaseRepository {
     List<Purchase> getAll();
     Optional<List<Purchase>> getAllByClient(String clientId);
     Purchase save(Purchase purchase);
+    Optional<Purchase> getPurchase(int purchaseId);
 }
