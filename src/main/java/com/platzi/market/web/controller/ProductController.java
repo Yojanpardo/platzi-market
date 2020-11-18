@@ -33,7 +33,7 @@ public class ProductController {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 404, message = "NOT FOUND")
     })
-    public ResponseEntity<Product> getProductById(@ApiParam(value = "Te product id", required = true, example = "7")
+    public ResponseEntity<Product> getProductById(@ApiParam(value = "The product id", required = true, example = "7")
                                                       @PathVariable("productId") int productId) {
 
         return this.productService.getProduct(productId)
